@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     store.dispatch(loadUser)
     async function getStripeApiKey() {
-      const { data } = await axios.get("/api/v1/stripeapi")
+      const { data } = await axios.get("https://be-web-lwsl.onrender.com/api/v1/stripeapi")
       setStripeApiKey(data.stripeApiKey)
     }
     getStripeApiKey()
